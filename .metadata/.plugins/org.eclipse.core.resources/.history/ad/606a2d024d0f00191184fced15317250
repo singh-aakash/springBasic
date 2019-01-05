@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- The below tag is for Annotation - Comment Bean tags to use Annotation -->
+	<!-- <context:component-scan base-package="com.capgemini.app"/> -->
+
+	
+	<bean id="organization" class="com.capgemini.app.bean.Organization">
+	     <!-- results in a setAddressList(java.util.List) call -->
+	   <property name = "boardMembers">
+         <list>
+            <value>Member1</value>
+         <!--    <value>Member2</value>
+            <value>Member3</value>
+            <value>Member4</value> -->
+         </list>
+      </property>
+      <!-- results in a setAddressMap(java.util.Map) call -->
+      <property name = "branchManagers">
+         <map>
+            <entry key = "SBI" value = "Member1"/>
+         <!--     <entry key = "ICICI" value = "Member2"/>
+            <entry key = "HDFC" value = "Member3"/>
+            <entry key = "AXIS" value = "Member4"/>-->
+         </map>
+      </property>
+		<!-- results in a setAddressSet(java.util.Set) call -->
+      <property name = "cities">
+         <set>
+            <value>LUCKNOW</value>
+          <!--    <value>DELHI</value>
+            <value>MUMBAI</value>
+            <value>BANGALORE</value>-->
+         </set>
+      </property>
+		<property name="dateOfEstablishment"></property>
+		<property name="ipAddresses"></property>
+		<property name="listed" value="false"></property>
+		<property name="name" value="Capgemini"></property>
+		<property name="orgId" value="1234"></property>
+		<property name="shareValue"></property>
+		<!-- results in a setAddressProp(java.util.Properties) call -->
+      <property name = "addressProp">
+         <props>
+            <prop key = "one">INDIA</prop>
+         <!--   <prop key = "one">INDIA</prop>
+            <prop key = "two">France</prop>
+            <prop key = "three">USA</prop>
+            <prop key = "four">USA</prop>-->
+         </props>
+      </property>
+	</bean>
+	
+	<bean id="organization2" class="com.capgemini.app.bean.Organization">
+		<constructor-arg value=""/>
+		<constructor-arg ref=""/>
+	</bean>
+	
+</beans>
+
+
+
+
+

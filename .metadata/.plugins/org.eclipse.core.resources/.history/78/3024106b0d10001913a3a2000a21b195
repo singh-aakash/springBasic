@@ -1,0 +1,5 @@
+package com.pluralSight.repository;
+
+public class HibernateCustomerRepository {
+
+}

@@ -1,0 +1,5 @@
+1546596426621	Rename package 'springSample'
+1546597321111	Extract interface 'CustomerRepository'
+1546598271359	Extract interface 'CustomerService'
+1546601202131	Delete element
+1546601223889	Extract interface 'CustomerRepository'
